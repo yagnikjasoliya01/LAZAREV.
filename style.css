@@ -30,6 +30,7 @@ nav h1 {
     font-size: 1.6vw;
 }
 
+
 .nav-part2 {
     display: flex;
     gap: 2vw;
@@ -44,6 +45,23 @@ nav h1 {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 1.7vw;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-part2 h4:after{
+    content: "";
+    position: absolute;
+    background-color: #46c6ec;
+    height: 1.3px;
+    width: 0%;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+.nav-part2 h4:hover:after{
+    width: 100%;
 }
 
 .nav-part2 h5 {
@@ -51,6 +69,8 @@ nav h1 {
     /* background-color: red; */
     display: none;
     overflow: hidden;
+    cursor: pointer;
+
 }
 
 .nav-part2 h5 span {
@@ -66,9 +86,10 @@ nav h1 {
     /* text-transform: lowercase; */
     padding: 2px 7px;
     /* margin-top: 3px; */
-    border: 1px solid #222121;
+    /* border: 1px solid #222121; */
     border-radius: 50px;
 }
+
 
 /* nav:hover #nav-bottom{
     background-color: #111;
@@ -87,7 +108,8 @@ nav h1 {
 } */
 
 nav button {
-    background-color: #0BA34E;
+    /* background-color: #0BA34E; */
+    background-color: #46c6ec;
     display: flex;
     align-items: center;
     padding: 14px 20px;
@@ -99,7 +121,7 @@ nav button {
 }
 
 nav button svg {
-    height: 0.8vw;
+    height: 1vw;
     margin-left: 1.6vw;
 }
 
@@ -108,11 +130,12 @@ nav button svg {
     height: 0vh;
     position: absolute;
     /* background-color: red; */
-    top: 118%;
+    top: 100%;
     background-color: #111;
     z-index: 9;
     border-bottom: 1px solid #fff;
 }
+
 
 /* page1-------------------------------------------------------- */
 #page1{
@@ -135,7 +158,7 @@ nav button svg {
     height: 6vw;
     border-radius: 50%;
     width:6vw;
-    background-color: #0BA34E;
+    background-color: #46c6ec;
 }
 
 #page1 p{
@@ -151,18 +174,29 @@ nav button svg {
 }
 
 #page1-something h4{
+    border: 1.5px solid #46c6ec;  
+    color: #46c6ec;
+    background-color: rgba(13, 163, 78, .1);
+    border-radius: 50vw;
     font-weight: 400;
     font-size: 1vw;
     text-transform: lowercase;
     padding: 5px 11px;
     margin-top: 7px;
-    border: 1px solid #797777;
+    /* border: 1px solid #797777; */
     border-radius: 50px;
+    /* box-shadow: 0 3px 6px rgba(50, 179, 32, 0.308); */
 }
 
 #page1-something h4:nth-last-child(2){
     border: none ;
     padding: 4px;
+    background-color: #111;
+    color: #fff;
+}
+
+#page1-something h4:nth-last-child(3){
+    margin-left: 0.5vh;
 }
 
 #moving-div{
@@ -219,10 +253,73 @@ nav button svg {
 }
 
 
-
+/* page1-------------------------------------------------------- */
 
 #page2{
     height: 100vh;
     width: 100%;
     background-color: #111;
+    position: relative;
+    padding: 0vw 10.5vw;
+    padding-bottom: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
 }
+
+/* page2-left------------------------ */
+#page2-left{
+    height: 100%;
+    width: 40%;
+    /* background-color: #333; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2.5vw 0vw ;
+}
+
+#page2-left p{
+    font-size: 1vw;
+    font-weight: 300;
+}
+#page2-left h5{
+    font-size: 1.1vw;
+    font-weight: 400;
+    width: 70%;
+}
+
+/* page2-left------------------------ */
+#page2-right{
+    height: 100%;
+    width: 50%;
+    /* background-color: #333; */
+}
+
+.right-elem{
+    position: relative;
+    /* background-color: red; */
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+    border-bottom: 1px solid #333;
+}
+#right-elem4{
+    border-bottom: none;
+}
+
+.right-elem h2{
+    font-size: 1.4vw;
+    font-weight: 350;
+}
+
+.right-elem img{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    scale: 0;
+}
+
